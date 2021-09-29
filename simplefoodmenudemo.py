@@ -6,7 +6,7 @@ if 'hasFood' not in st.session_state:
     st.session_state.hasFood = 0
 
 
-st.header("Welcome to ABC Simple Food Menu Demo")
+st.header("Welcome to Chef Mayhem's Food Menu")
 
 readme = st.checkbox("readme first")
 
@@ -25,9 +25,9 @@ st.write("Choose an option from the radio button on the side bar to continue.")
 
 option = st.sidebar.selectbox(
     'Select an option',
-     ['Add a food','Find a food','Get the sorted food list','Reset entire food menu system'])
+     ['Add your poison','Find your poison','Get the sorted poison list','Reset entire food menu system'])
 
-if option == 'Add a food':
+if option == 'Add your poison':
     foodName = st.text_input("Please enter the food name")
     foodPrice = st.text_input("Please enter the food price")
     submit = st.button('submit')
@@ -50,7 +50,7 @@ if option == 'Add a food':
             st.write("Please fill in the details first. ")
 
 
-elif option == 'Find a food':
+elif option == 'Find your poison':
         
 
     if st.session_state.hasFood ==1:
@@ -65,7 +65,7 @@ elif option == 'Find a food':
 
 
     
-elif option == 'Get the sorted food list':
+elif option == 'Get the sorted poison list':
 
     if st.session_state.hasFood ==1:
         st.write("The list in the Food Menu:")
